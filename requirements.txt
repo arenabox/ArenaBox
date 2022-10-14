@@ -1,0 +1,3 @@
+# Use following command to install hdbscan first : pip install --upgrade git+https://github.com/scikit-learn-contrib/hdbscan.git#egg=hdbscan
+bertopic
+sentence_transformers
