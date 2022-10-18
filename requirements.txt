@@ -3,4 +3,5 @@ bertopic
 sentence_transformers
 spacy
 nltk
+tweet-preprocessor
 # Download spacy model using: python -m spacy download en_core_web_md
