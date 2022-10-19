@@ -1,5 +1,7 @@
 import argparse
 import json
+import time
+import timeit
 from collections import defaultdict
 from os import listdir
 from os.path import isfile, join
@@ -7,9 +9,11 @@ from os.path import isfile, join
 import hdbscan
 import umap
 from bertopic import BERTopic
+from cuml.cluster import HDBSCAN
+from cuml.manifold import UMAP
 
 from sentence_transformers import SentenceTransformer
-
+from tqdm import tqdm
 
 from utils import clean_text, setup
 
@@ -18,12 +22,14 @@ def create_docs(base_jsonl_folder, eit_json_files, topic_name):
     docs = defaultdict(list)
     eit_json_files = eit_json_files if topic_name is None else [f'{topic_name}.json']
     nlp = setup()
+
     for eit_json_file in eit_json_files:
         community_name = eit_json_file.split('.')[0]
         with open(join(base_jsonl_folder,eit_json_file), "r") as fd:
             eit_data_json = json.load(fd)
         fd.close()
-        for id, data in eit_data_json.items():
+        print(f'Preprocessing tweets of {community_name}')
+        for id, data in tqdm(eit_data_json.items()):
             text = clean_text(data['content'], nlp)
             docs[community_name].append(text)
             docs['all'].append(text)
@@ -33,12 +39,13 @@ def create_docs(base_jsonl_folder, eit_json_files, topic_name):
 def train_model(docs, topic):
     sentence_model = SentenceTransformer("roberta-base-nli-stsb-mean-tokens")
     embeddings = sentence_model.encode(docs, show_progress_bar=True)
-    umap_model = umap.UMAP(n_neighbors=15,
+    start = timeit.default_timer()
+    umap_model = UMAP(n_neighbors=15,
                            n_components=10,
                            min_dist=0.0,
-                           metric='cosine',
-                           low_memory=False)
-    hdbscan_model = hdbscan.HDBSCAN(min_cluster_size=10,
+                           metric='cosine',)
+                           #low_memory=False)
+    hdbscan_model = HDBSCAN(min_cluster_size=10,
                                     min_samples=1,
                                     metric='euclidean',
                                     cluster_selection_method='eom',
@@ -53,6 +60,8 @@ def train_model(docs, topic):
                      language="multilingual")
     topics, probabilities = model.fit_transform(docs, embeddings)
     model.save(f"models/{topic}_topic_model")
+    end = timeit.default_timer()
+    print(f'Total modelling time: {end - start} seconds')
 
 
 if __name__ == '__main__':

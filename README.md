@@ -27,6 +27,9 @@ and then install required packages
 pip install -r requirements.txt
 ```
 
+Modelling can be made faster if high end resources are available. We used NVIDIA-??
+with CUDA 11.6 setup. As mentioned in the docs for [BERTopic](https://maartengr.github.io/BERTopic/faq.html#can-i-use-the-gpu-to-speed-up-the-model)
+we installed cuML to speedup HDBSCAN and UMAP and make full use of available resources.
 ## Usage
 
 ### 1. Training
