@@ -1,38 +1,38 @@
 import argparse
 import json
-import time
 import timeit
 from collections import defaultdict
 from os import listdir
 from os.path import isfile, join
 
-import hdbscan
-import umap
 from bertopic import BERTopic
 from cuml.cluster import HDBSCAN
 from cuml.manifold import UMAP
-
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
-from utils import clean_text, setup
+from utils import preprocess_text, setup, pos_preprocessing
 
 
 def create_docs(base_jsonl_folder, eit_json_files, topic_name):
     docs = defaultdict(list)
     eit_json_files = eit_json_files if topic_name is None else [f'{topic_name}.json']
     nlp = setup()
-
-    for eit_json_file in eit_json_files:
+    print('Preprocessing docs')
+    for eit_json_file in tqdm(eit_json_files):
         community_name = eit_json_file.split('.')[0]
         with open(join(base_jsonl_folder,eit_json_file), "r") as fd:
             eit_data_json = json.load(fd)
         fd.close()
-        print(f'Preprocessing tweets of {community_name}')
-        for id, data in tqdm(eit_data_json.items()):
-            text = clean_text(data['content'], nlp)
+        for id, data in eit_data_json.items():
+            text = preprocess_text(data['content'])
             docs[community_name].append(text)
-            docs['all'].append(text)
+
+        # POS preprocessing
+        tags_to_remove = ['ADV', 'PRON', 'CCONJ', 'PUNCT', 'PART', 'DET', 'ADP', 'SPACE', 'NUM', 'SYM']
+        docs[community_name] = pos_preprocessing(docs=docs[community_name],nlp=nlp,tags_to_remove=tags_to_remove)
+
+        docs['all'] += docs[community_name]
 
     return docs
 

@@ -3,7 +3,7 @@ import string
 import nltk
 from nltk.corpus import stopwords
 import preprocessor as p
-import en_core_web_md
+import en_core_web_md #python -m spacy download en_core_web_md
 
 
 def setup():
@@ -11,7 +11,8 @@ def setup():
     nlp = en_core_web_md.load()
     return nlp
 
-def clean_text(text, nlp):
+
+def preprocess_text(text):
 
     ## Remove @ from mentions
     text = re.sub(r"[^A-Za-z0-9^,!.\/'+-=]", " ", text)
@@ -32,10 +33,6 @@ def clean_text(text, nlp):
     #p.set_options(p.OPT.URL, p.OPT.EMOJI, p.OPT.SMILEY, p.OPT.NUMBER)
     text = p.clean(text)
 
-    # POS preprocessing
-    removal = ['ADV', 'PRON', 'CCONJ', 'PUNCT', 'PART', 'DET', 'ADP', 'SPACE', 'NUM', 'SYM']
-    text = ' '.join([str(token) for token in nlp(text) if token.pos_ not in removal])
-
 
 
     '''text = text.split()
@@ -44,3 +41,12 @@ def clean_text(text, nlp):
     text = " ".join(stemmed_words)'''
 
     return text
+
+
+def pos_preprocessing(docs, nlp, tags_to_remove):
+    new_docs = []
+    for doc in nlp.pipe(docs, n_process=4):
+        tokens = [str(token) for token in doc if
+                    token.pos_ not in tags_to_remove and not token.is_stop and token.is_alpha]
+        new_docs.append(" ".join(tokens))
+    return new_docs
