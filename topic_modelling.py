@@ -15,7 +15,7 @@ from utils import preprocess_text, setup, pos_preprocessing
 
 
 def create_docs(base_jsonl_folder, eit_json_files, topic_name):
-    docs = defaultdict(list)
+    docs = defaultdict(lambda: defaultdict(list))
     eit_json_files = eit_json_files if topic_name is None else [f'{topic_name}.json']
     nlp = setup()
     print('Preprocessing docs')
@@ -25,20 +25,25 @@ def create_docs(base_jsonl_folder, eit_json_files, topic_name):
             eit_data_json = json.load(fd)
         fd.close()
         for id, data in eit_data_json.items():
-            text = preprocess_text(data['content'])
-            docs[community_name].append(text)
+            text = utils.preprocess_text(data['content'])
+            ts = time.strftime('%Y-%m-%d %H:%M:%S', time.strptime(data['date'], '%Y-%m-%dT%H:%M:%S+00:00'))
+            docs[community_name]['text'].append(text)
+            docs[community_name]['time'].append(ts)  # Used for temporal analysis
+            docs[community_name]['class'].append(community_name)  # Used for supervised learning
 
         # POS preprocessing
         tags_to_remove = ['ADV', 'PRON', 'CCONJ', 'PUNCT', 'PART', 'DET', 'ADP', 'SPACE', 'NUM', 'SYM']
-        docs[community_name] = pos_preprocessing(docs=docs[community_name],nlp=nlp,tags_to_remove=tags_to_remove)
+        docs[community_name]['text'] = utils.pos_preprocessing(docs=docs[community_name]['text'],tags_to_remove=tags_to_remove)
 
-        docs['all'] += docs[community_name]
+        docs['all']['text'] += docs[community_name]['text']
+        docs['all']['time'] += docs[community_name]['time']
+        docs['all']['class'] += docs[community_name]['class']
 
     return docs
 
 def train_model(docs, topic):
     sentence_model = SentenceTransformer("roberta-base-nli-stsb-mean-tokens")
-    embeddings = sentence_model.encode(docs, show_progress_bar=True)
+    embeddings = sentence_model.encode(docs['text'], show_progress_bar=True)
     start = timeit.default_timer()
     umap_model = UMAP(n_neighbors=15,
                            n_components=10,
