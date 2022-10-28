@@ -42,6 +42,25 @@ python topic_modelling.py --topic_name euparl
 
 # By default, all topics will be modelled at once
 ```
+
+topic_modelling.py script also supports following parameters:
+```
+data : path to twitter json files, default: data/eit_jsonl
+topic_name : perform topic modelling on a particular topic (to find sub topics)
+supervised : train a supervised topic model using BERTopic, default: False
+save : save a trained model to models/TOPICNAME_topic_model/model, default False
+```
+
+### 2. Evaluation
+Topic models can be evaluated on [Coherence metric](https://radimrehurek.com/gensim/models/coherencemodel.html) (c_v)
+
+```
+python topic_modelling.py -eval
+```
+
+This will create [LDA](https://radimrehurek.com/gensim/models/ldamodel.html) based topic models with varying value of topics (1-50) and finally plot
+the coherence value against the topics. This help us choose the optmial value for the number
+of topics model should look for in the corpus.
 <!--
 **arenabox/ArenaBox** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
