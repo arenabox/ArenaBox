@@ -11,13 +11,13 @@ from cuml.manifold import UMAP
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 
-from utils import preprocess_text, setup, pos_preprocessing
+from utils import Utils
 
 
 def create_docs(base_jsonl_folder, eit_json_files, topic_name):
     docs = defaultdict(lambda: defaultdict(list))
     eit_json_files = eit_json_files if topic_name is None else [f'{topic_name}.json']
-    nlp = setup()
+    utils = Utils()
     print('Preprocessing docs')
     for eit_json_file in tqdm(eit_json_files):
         community_name = eit_json_file.split('.')[0]
