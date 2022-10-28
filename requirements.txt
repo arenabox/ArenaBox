@@ -4,4 +4,7 @@ sentence_transformers
 spacy
 nltk
 tweet-preprocessor
+kaleido
+matplotlib
+gensim
 # Download spacy model using: python -m spacy download en_core_web_md
