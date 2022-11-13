@@ -3,38 +3,58 @@ import json
 import time
 import timeit
 from collections import defaultdict
+from datetime import datetime
 from os import listdir
 from os.path import isfile, join
 from pathlib import Path
-from random import shuffle
 from typing import Optional
 
 from bertopic import BERTopic
-from cuml.cluster import HDBSCAN
-from cuml.manifold import UMAP
-from gensim import corpora
-from gensim.corpora import Dictionary
-from gensim.models import CoherenceModel, LdaMulticore
+from hdbscan import HDBSCAN
+
+# Uncomment following for faster computation
+#from cuml.cluster import HDBSCAN
+#from cuml.manifold import UMAP
+
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
-from matplotlib import pyplot as plt
+from umap import UMAP
 
+from eval_topic import using_lda
 from utils import Utils
 
 
-def create_docs(base_jsonl_folder, eit_json_files, topic_name):
+def process_tweets(data, utils):
+    text = utils.preprocess_text(data['renderedContent'])
+    ts = time.strftime('%Y-%m-%d %H:%M:%S', time.strptime(data['date'], '%Y-%m-%dT%H:%M:%S+00:00'))
+    return text, ts
+
+def process_scientific_articles(data, utils):
+    text = data['abstract']
+    for head, content in data['text'].items():
+        if content and content != '':
+            text = text + ' ' + content.strip()
+    text = utils.preprocess_text(text)
+    year = datetime.strptime(data['year'], '%Y').year
+    return text, year
+
+def create_docs(base_jsonl_folder, json_files, topic_name, type):
     docs = defaultdict(lambda: defaultdict(list))
-    eit_json_files = eit_json_files if topic_name is None else [f'{topic_name}.json']
+    json_files = json_files if topic_name is None else [f'{topic_name}.json']
     utils = Utils()
     print('Preprocessing docs')
-    for eit_json_file in tqdm(eit_json_files):
-        community_name = eit_json_file.split('.')[0]
-        with open(join(base_jsonl_folder,eit_json_file), "r") as fd:
-            eit_data_json = json.load(fd)
+    for json_file in tqdm(json_files):
+        community_name = json_file.split('.')[0]
+        with open(join(base_jsonl_folder,json_file), "r") as fd:
+            json_data = json.load(fd)
         fd.close()
-        for id, data in eit_data_json.items():
-            text = utils.preprocess_text(data['content'])
-            ts = time.strftime('%Y-%m-%d %H:%M:%S', time.strptime(data['date'], '%Y-%m-%dT%H:%M:%S+00:00'))
+        for id, data in json_data.items():
+            if type == 'tweet':
+                text, ts = process_tweets(data, utils)
+            elif type == 'sci':
+                text, ts = process_scientific_articles(data, utils)
+            else:
+                raise ValueError(f'Invalid type {type}.')
             docs[community_name]['text'].append(text)
             docs[community_name]['time'].append(ts)  # Used for temporal analysis
             docs[community_name]['class'].append(community_name)  # Used for supervised learning
@@ -49,8 +69,9 @@ def create_docs(base_jsonl_folder, eit_json_files, topic_name):
 
     return docs
 
+
 def train_model(docs, supervised: Optional[bool] = False):
-    sentence_model = SentenceTransformer("roberta-base-nli-stsb-mean-tokens")
+    sentence_model = SentenceTransformer("paraphrase-multilingual-mpnet-base-v2")
     embeddings = sentence_model.encode(docs['text'], show_progress_bar=True)
     start = timeit.default_timer()
     umap_model = UMAP(n_neighbors=15,
@@ -63,47 +84,20 @@ def train_model(docs, supervised: Optional[bool] = False):
                                     metric='euclidean',
                                     cluster_selection_method='eom',
                                     prediction_data=True)
-    model = BERTopic(top_n_words=20,
-                     n_gram_range=(1, 3),
+    model = BERTopic(n_gram_range=(1, 3),
                      calculate_probabilities=True,
                      umap_model=umap_model,
                      hdbscan_model=hdbscan_model,
                      verbose=True,
+                     nr_topics=12,
                      language="multilingual")
     if supervised:
-        model.fit_transform(docs['text'], docs['class'], embeddings)
+        model.fit_transform(documents=docs['text'], y=docs['class'],  embeddings=embeddings)
     else:
         model.fit_transform(docs['text'], embeddings)
     end = timeit.default_timer()
     print(f'Total modelling time: {end - start} seconds')
     return model
-
-def evaluate(docs):
-    docs = [doc for doc in docs['text'] if doc != '']
-    shuffle(docs)
-    tokens = [doc.split() for doc in docs]
-    dictionary = Dictionary(tokens)
-    corpus = [dictionary.doc2bow(token) for token in tokens]
-    topics = []
-    score = []
-    for i in range(1, 50):
-        start = timeit.default_timer()
-        print(f'Epoch {i} starts:')
-        lda_model = LdaMulticore(corpus=corpus, id2word=dictionary, iterations=10, num_topics=i, workers=4, passes=10,
-                                 random_state=100)
-        cm = CoherenceModel(model=lda_model, texts=tokens, corpus=corpus, dictionary=dictionary,
-                            coherence='c_v')
-        topics.append(i)
-        s = cm.get_coherence()
-        score.append(s)
-        print(f'Coherence: {s}')
-        ends = timeit.default_timer() - start
-        print(f'Epoch {i} ends after {ends}s')
-    _ = plt.plot(topics, score)
-    _ = plt.xlabel('Number of Topics')
-    _ = plt.ylabel('Coherence Score')
-    plt.show()
-    plt.savefig(f'coherence_plot')
 
 
 if __name__ == '__main__':
@@ -124,6 +118,12 @@ if __name__ == '__main__':
     )
 
     parser.add_argument(
+        '-type',
+        help='Type of data for topic modelling. Currently, twitter ("tweet") data and scientific("sci") articles included.',
+        required=False, type=str, default='twitter',
+    )
+
+    parser.add_argument(
         '-supervised',
         help='If provided then topic modelling is done in supervised manner',
         required=False, action='store_true'
@@ -141,16 +141,19 @@ if __name__ == '__main__':
         required=False, action='store_true'
     )
 
+
     args, remaining_args = parser.parse_known_args()
 
     base_jsonl_folder = args.data
     topic = args.topic_name if args.topic_name is not None else 'all'
-    eit_json_files = [f for f in listdir(base_jsonl_folder) if
+    json_files = [f for f in listdir(base_jsonl_folder) if
                       isfile(join(base_jsonl_folder, f)) and f.endswith('json')]
-    docs = create_docs(base_jsonl_folder=base_jsonl_folder, eit_json_files=eit_json_files,
-                       topic_name=args.topic_name)
-    if eval:
-        evaluate(docs=docs[topic])
+    docs = create_docs(base_jsonl_folder=base_jsonl_folder, json_files=json_files,
+                               topic_name=args.topic_name, type=args.type)
+    if args.eval:
+        #trained_model = train_model(docs=docs['all'], supervised=args.supervised)
+        #get_coherence_score(docs['all'], trained_model)
+        using_lda(docs=docs[topic]['text'])
     else:
         if args.topic_name is None:
             trained_model = train_model(docs=docs['all'], supervised=args.supervised)
