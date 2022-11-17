@@ -1,0 +1,5 @@
+data_file_path: ./data/model_data
+topic_name: EIST_PDFS_TM
+raw_data_path: ./data/strandbox_jsons
+type: sci # For now only two types are supported: tweet or sci
+
