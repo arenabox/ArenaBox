@@ -8,7 +8,7 @@ todo
 
 It is recommended to create a conda environment before setting up the project.
 ```
-# Execute following command. We use python v3.9 
+# Execute following command. We use python v3.9
 conda create -n ENV_NAME python=3.9
 
 # replace ENV_NAME with a name of your choice. Once environment is created, activate the environment as:

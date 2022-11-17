@@ -7,4 +7,6 @@ tweet-preprocessor
 kaleido
 matplotlib
 gensim
+networkx
+pyvis
 # Download spacy model using: python -m spacy download en_core_web_md
