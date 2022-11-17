@@ -1,6 +1,7 @@
 import re
 import string
 import nltk
+from nltk import SnowballStemmer
 from nltk.corpus import stopwords
 import preprocessor as p
 import en_core_web_md #python -m spacy download en_core_web_md
@@ -37,10 +38,10 @@ class Utils():
 
 
 
-        '''text = text.split()
+        text = text.split()
         stemmer = SnowballStemmer('english')
         stemmed_words = [stemmer.stem(word) for word in text]
-        text = " ".join(stemmed_words)'''
+        text = " ".join(stemmed_words)
 
         return text
 
