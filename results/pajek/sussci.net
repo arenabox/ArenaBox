@@ -1,0 +1,272 @@
+*vertices 66
+1 "['sdgs', 'target', 'synergy', 'sdg', 'indicator', 'goal', 'development', 'trade', 'analysis', 'trade offs']" 0.0 0.0 ellipse
+2 "['student', 'sustainability', 'research', 'course', 'program', 'university', 'process', 'project', 'learning', 'science']" 0.0 0.0 ellipse
+3 "['community', 'year', 'land', 'life', 'area', 'state', 'place', 'family', 'time', 'food']" 0.0 0.0 ellipse
+4 "['interview', 'participant', 'group', 'question', 'project', 'transcribed', 'data', 'survey', 'analysis', 'process']" 0.0 0.0 ellipse
+5 "['japan', 'scenario', 'cost', 'model', 'power', 'energy', 'sector', 'hydrogen', 'emission', 'nuclear']" 0.0 0.0 ellipse
+6 "['fishery', 'fisher', 'ocean', 'growth', 'economy', 'fishing', 'blue', 'marine', 'ecological', 'fish']" 0.0 0.0 ellipse
+7 "['interview', 'survey', 'group', 'farmer', 'conducted', 'interviewed', 'respondent', 'participant', 'structured', 'household']" 0.0 0.0 ellipse
+8 "['farmer', 'farm', 'farming', 'practice', 'group', 'advisor', 'project', 'agricultural', 'cop', 'researcher']" 0.0 0.0 ellipse
+9 "['diet', 'food', 'farmer', 'product', 'consumption', 'animal', 'production', 'system', 'crop', 'meat']" 0.0 0.0 ellipse
+10 "['science', 'research', 'problem', 'knowledge', 'discipline', 'process', 'collaboration', 'sustainability', 'project', 'work']" 0.0 0.0 ellipse
+11 "['forest', 'tree', 'deforestation', 'land', 'area', 'landscape', 'biodiversity', 'agroforestry', 'forestry', 'underuse']" 0.0 0.0 ellipse
+12 "['africa', 'african', 'challenge', 'country', 'project', 'sustainability', 'uganda', 'approach', 'barometer', 'study']" 0.0 0.0 ellipse
+13 "['complexity', 'problem', 'process', 'approach', 'research', 'system', 'sustainability', 'practice', 'science', 'framework']" 0.0 0.0 ellipse
+14 "['scale', 'system', 'ecological', 'social', 'landscape', 'change', 'human', 'ecosystem', 'land', 'nature']" 0.0 0.0 ellipse
+15 "['shoreline', 'island', 'delta', 'coast', 'area', 'rise', 'level', 'beach', 'change', 'sediment']" 0.0 0.0 ellipse
+16 "['alternative', 'world', 'practice', 'movement', 'change', 'life', 'society', 'transformation', 'community', 'economy']" 0.0 0.0 ellipse
+17 "['disaster', 'change', 'community', 'system', 'region', 'place', 'level', 'resource', 'climate', 'term']" 0.0 0.0 ellipse
+18 "['island', 'atoll', 'area', 'coast', 'bangantebure', 'eita', 'eita bangantebure', 'lagoon', 'coastal', 'bairiki']" 0.0 0.0 ellipse
+19 "['system', 'change', 'concept', 'approach', 'process', 'scale', 'case', 'level', 'policy', 'development']" 0.0 0.0 ellipse
+20 "['china', 'city', 'pollution', 'province', 'industry', 'government', 'instrument', 'investment', 'emission', 'energy']" 0.0 0.0 ellipse
+21 "['farmer', 'landscape', 'community', 'system', 'farm', 'social', 'tree', 'practice', 'agriculture', 'land']" 0.0 0.0 ellipse
+22 "['emission', 'scenario', 'cost', 'carbon', 'reduction', 'model', 'sector', 'price', 'energy', 'japan']" 0.0 0.0 ellipse
+23 "['sheet', 'ice', 'temperature', 'change', 'storm', 'scenario', 'increase', 'year', 'model', 'cyclone']" 0.0 0.0 ellipse
+24 "['sustainability', 'student', 'university', 'course', 'science', 'program', 'curriculum', 'academic', 'competency', 'education']" 0.0 0.0 ellipse
+25 "['society', 'process', 'social', 'sustainability', 'system', 'market', 'human', 'organization', 'action', 'value']" 0.0 0.0 ellipse
+26 "['consumer', 'reuse', 'good', 'period', 'market', 'recycling', 'product', 'waste', 'second hand', 'cost']" 0.0 0.0 ellipse
+27 "['disaster', 'risk', 'hazard', 'change', 'opportunity', 'earthquake', 'event', 'vulnerability', 'community', 'climate']" 0.0 0.0 ellipse
+28 "['practice', 'transformation', 'sustainability', 'world', 'change', 'process', 'human', 'self', 'system', 'experience']" 0.0 0.0 ellipse
+29 "['year', 'region', 'water', 'crop', 'area', 'country', 'land', 'forest', 'food', 'high']" 0.0 0.0 ellipse
+30 "['farmer', 'system', 'farming', 'change', 'production', 'group', 'policy', 'level', 'farm', 'economic']" 0.0 0.0 ellipse
+31 "['hazard', 'system', 'vulnerability', 'delta', 'area', 'change', 'climate', 'risk', 'assessment', 'water']" 0.0 0.0 ellipse
+32 "['group', 'owner', 'community', 'indigenous', 'management', 'workshop', 'australian', 'project', 'knowledge', 'organisation']" 0.0 0.0 ellipse
+33 "['fishery', 'fisher', 'bay', 'community', 'co management', 'tela', 'management', 'fishing', 'fisherman', 'group']" 0.0 0.0 ellipse
+34 "['data', 'model', 'japan', 'china', 'province', 'capital', 'scenario', 'country', 'gdp', 'year']" 0.0 0.0 ellipse
+35 "['farmer', 'farm', 'household', 'crop', 'food', 'study', 'region', 'woman', 'income', 'farming']" 0.0 0.0 ellipse
+36 "['capitalist', 'practice', 'state', 'alternative', 'world', 'development', 'colonial', 'struggle', 'modernity', 'pluriverse']" 0.0 0.0 ellipse
+37 "['emission', 'reduction', 'carbon', 'target', 'scenario', 'ghg', 'mitigation', 'energy', 'japan', 'country']" 0.0 0.0 ellipse
+38 "['forest', 'fe', 'management', 'land', 'policy', 'landscape', 'forestry', 'community', 'local', 'disturbance']" 0.0 0.0 ellipse
+39 "['sustainability', 'conception', 'project', 'development', 'science', 'adequacy', 'research', 'sustainable', 'challenge', 'checking']" 0.0 0.0 ellipse
+40 "['forest', 'land', 'area', 'landscape', 'system', 'region', 'deforestation', 'agriculture', 'state', 'agroforestry']" 0.0 0.0 ellipse
+41 "['japan', 'technology', 'energy', 'model', 'demand', 'electricity', 'emission', 'fuel', 'sector', 'scenario']" 0.0 0.0 ellipse
+42 "['interview', 'snowball', 'sampling', 'interviewee', 'participant', 'group', 'structured', 'study', 'semi structured', 'conducted']" 0.0 0.0 ellipse
+43 "['actor', 'decision', 'process', 'value', 'policy', 'sustainability', 'governance', 'normative', 'making', 'issue']" 0.0 0.0 ellipse
+44 "['justice', 'modernity', 'coloniality', 'transformation', 'world', 'social', 'capitalist', 'sustainability', 'concept', 'conflict']" 0.0 0.0 ellipse
+45 "['pollution', 'water', 'resource', 'risk', 'technology', 'waste', 'social', 'plant', 'company', 'problem']" 0.0 0.0 ellipse
+46 "['transformation', 'action', 'sustainability', 'individual', 'society', 'change', 'social', 'human', 'system', 'idea']" 0.0 0.0 ellipse
+47 "['city', 'development', 'system', 'resource', 'sustainable', 'sustainability', 'country', 'goal', 'approach', 'study']" 0.0 0.0 ellipse
+48 "['vision', 'technology', 'system', 'transition', 'scenario', 'governance', 'geoengineering', 'future', 'sustainability', 'approach']" 0.0 0.0 ellipse
+49 "['conflict', 'violence', 'activist', 'environmental', 'movement', 'ejatlas', 'justice', 'form', 'mobilization', 'repression']" 0.0 0.0 ellipse
+50 "['energy', 'emission', 'scenario', 'wind', 'fuel', 'solar', 'electricity', 'sector', 'generation', 'power']" 0.0 0.0 ellipse
+51 "['change', 'climate', 'vulnerability', 'risk', 'hazard', 'adaptation', 'impact', 'exposure', 'framework', 'assessment']" 0.0 0.0 ellipse
+52 "['resilience', 'social', 'change', 'community', 'system', 'ecological', 'management', 'capital', 'adaptation', 'capacity']" 0.0 0.0 ellipse
+53 "['value', 'science', 'perspective', 'approach', 'sustainability', 'human', 'making', 'ecological', 'system', 'social']" 0.0 0.0 ellipse
+54 "['crop', 'food', 'country', 'area', 'production', 'land', 'fruit', 'consumption', 'product', 'region']" 0.0 0.0 ellipse
+55 "['china', 'tianjin', 'city', 'beijing', 'metropolis', 'region', 'resource', 'industry', 'urban', 'growth']" 0.0 0.0 ellipse
+56 "['christian', 'faith', 'world', 'religion', 'tradition', 'behaviour', 'value', 'religious', 'god', 'belief']" 0.0 0.0 ellipse
+57 "['nature', 'gender', 'erbi', 'participant', 'srbi', 'bonding', 'connectedness', 'mpse', 'sport', 'connection']" 0.0 0.0 ellipse
+58 "['model', 'fit', 'variable', 'loading', 'test', 'analysis', 'variance', 'item', 'factor', 'construct']" 0.0 0.0 ellipse
+59 "['nature', 'value', 'concept', 'relationship', 'human', 'literature', 'social', 'instrumental', 'frame', 'perspective']" 0.0 0.0 ellipse
+60 "['conflict', 'case', 'dam', 'violence', 'project', 'impact', 'country', 'indigenous', 'community', 'group']" 0.0 0.0 ellipse
+61 "['consumer', 'food', 'producer', 'choice', 'vegetable', 'production', 'market', 'system', 'agroforestry', 'consumption']" 0.0 0.0 ellipse
+62 "['japan', 'capital', 'prefecture', 'iwi', 'scenario', 'sado', 'ssps', 'wealth', 'population', 'level']" 0.0 0.0 ellipse
+63 "['discourse', 'movement', 'political', 'growth', 'capitalism', 'social', 'society', 'life', 'economic', 'degrowth']" 0.0 0.0 ellipse
+64 "['transformation', 'process', 'practice', 'change', 'place', 'action', 'approach', 'perspective', 'reflection', 'sustainability']" 0.0 0.0 ellipse
+65 "['country', 'economy', 'market', 'profit', 'society', 'technology', 'resource', 'world', 'city', 'energy']" 0.0 0.0 ellipse
+66 "['water', 'development', 'change', 'water related', 'system', 'target', 'stakeholder', 'management', 'approach', 'resource']" 0.0 0.0 ellipse
+*edges
+1 2 1
+1 4 1
+1 7 1
+1 8 1
+1 9 2
+1 10 1
+1 13 1
+1 14 2
+1 18 1
+1 19 3
+1 21 2
+1 23 1
+1 28 1
+1 44 1
+1 47 2
+1 51 1
+1 52 1
+1 55 1
+1 58 1
+2 4 5
+2 5 1
+2 7 1
+2 10 3
+2 12 1
+2 13 1
+2 14 1
+2 19 1
+2 24 5
+2 32 2
+2 47 2
+2 53 1
+2 60 1
+2 63 1
+3 4 1
+3 7 2
+3 9 1
+3 17 1
+3 29 1
+3 35 1
+3 36 1
+3 43 2
+3 44 1
+3 45 1
+3 50 1
+3 61 1
+4 7 5
+4 10 2
+4 13 1
+4 14 1
+4 17 1
+4 21 2
+4 24 3
+4 32 4
+4 38 1
+4 42 2
+4 47 1
+4 56 1
+4 60 1
+4 61 1
+5 22 8
+5 25 1
+5 37 2
+5 41 5
+5 50 8
+6 63 1
+7 9 1
+7 11 1
+7 17 1
+7 18 1
+7 19 1
+7 21 2
+7 29 1
+7 35 2
+7 38 1
+7 50 1
+7 52 2
+7 54 1
+7 60 1
+7 61 1
+8 9 2
+8 21 4
+8 53 1
+9 10 1
+9 11 1
+9 21 2
+9 35 3
+9 53 1
+9 54 1
+10 13 1
+10 14 1
+10 28 1
+10 36 1
+10 43 2
+10 48 1
+10 63 1
+10 64 1
+10 65 1
+11 21 1
+11 29 3
+11 30 1
+11 38 2
+11 40 2
+11 51 1
+11 65 1
+12 16 1
+12 45 1
+13 24 1
+13 47 1
+14 19 1
+14 21 2
+14 32 1
+14 40 1
+14 53 1
+15 18 5
+15 23 1
+15 31 1
+15 32 1
+15 33 1
+16 28 1
+16 44 2
+16 53 1
+16 63 1
+17 19 2
+17 21 1
+17 29 1
+17 42 1
+17 51 1
+17 52 1
+17 66 2
+18 23 1
+18 58 1
+19 25 1
+19 28 1
+19 50 1
+20 22 1
+20 34 2
+20 41 1
+20 54 1
+20 55 2
+21 30 4
+21 32 3
+21 40 2
+21 42 1
+21 43 1
+21 51 1
+21 54 1
+21 60 1
+21 61 1
+21 64 1
+22 25 1
+22 37 5
+22 41 3
+22 50 5
+23 58 1
+24 47 1
+24 60 1
+25 46 1
+25 47 2
+25 65 1
+28 44 2
+28 53 1
+29 40 1
+29 54 1
+29 55 1
+30 35 1
+30 40 2
+30 42 1
+30 52 1
+30 60 1
+31 54 1
+31 66 1
+32 42 1
+32 43 1
+34 55 2
+34 62 2
+36 44 3
+36 63 1
+37 41 2
+37 50 4
+40 42 1
+40 54 1
+41 50 2
+42 44 1
+42 45 1
+42 61 2
+44 45 1
+44 46 1
+44 49 2
+44 59 1
+44 63 3
+45 49 1
+45 61 1
+46 56 1
+47 60 1
+47 65 1
+49 60 2
+49 63 1
+51 55 1
+51 65 1
+53 59 1
+55 65 1
+58 59 1
+58 62 1
+59 62 1

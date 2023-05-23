@@ -1,0 +1,220 @@
+*vertices 46
+1 "['interview', 'data', 'conducted', 'structured', 'analysis', 'semi structured', 'interviewee', 'semi', 'study', 'project']" 0.0 0.0 ellipse
+2 "['biofuels', 'fuel', 'bioeconomy', 'market', 'technology', 'industry', 'ethanol', 'policy', 'development', 'biofuel']" 0.0 0.0 ellipse
+3 "['transition', 'research', 'sustainability', 'political', 'change', 'process', 'policy', 'legitimacy', 'politics', 'power']" 0.0 0.0 ellipse
+4 "['actor', 'transition', 'change', 'process', 'system', 'role', 'understanding', 'practice', 'niche', 'study']" 0.0 0.0 ellipse
+5 "['farmer', 'farming', 'farm', 'food', 'animal', 'change', 'dairy', 'agriculture', 'level', 'agricultural']" 0.0 0.0 ellipse
+6 "['transition', 'study', 'framework', 'research', 'literature', 'innovation', 'sustainability', 'system', 'niche', 'change']" 0.0 0.0 ellipse
+7 "['case', 'study', 'analysis', 'research', 'data', 'innovation', 'literature', 'investigation', 'selected', 'question']" 0.0 0.0 ellipse
+8 "['service', 'time', 'project', 'economy', 'company', 'issue', 'user', 'practice', 'social', 'place']" 0.0 0.0 ellipse
+9 "['car', 'vehicle', 'battery', 'sharing', 'technology', 'electric', 'mobility', 'transport', 'market', 'emission']" 0.0 0.0 ellipse
+10 "['coal', 'energy', 'technology', 'policy', 'renewable', 'country', 'electricity', 'germany', 'power', 'clean']" 0.0 0.0 ellipse
+11 "['solar', 'energy', 'grid', 'industry', 'market', 'development', 'government', 'model', 'sector', 'policy']" 0.0 0.0 ellipse
+12 "['bike', 'city', 'bicycle', 'cycling', 'car', 'amsterdam', 'mobility', 'ffbs', 'parking', 'sharing']" 0.0 0.0 ellipse
+13 "['innovation', 'actor', 'change', 'field', 'transition', 'niche', 'process', 'regime', 'approach', 'level']" 0.0 0.0 ellipse
+14 "['building', 'construction', 'project', 'intermediary', 'sector', 'energy', 'housing', 'process', 'development', 'policy']" 0.0 0.0 ellipse
+15 "['complexity', 'transition', 'process', 'system', 'study', 'approach', 'model', 'framework', 'research', 'level']" 0.0 0.0 ellipse
+16 "['transition', 'practice', 'process', 'system', 'actor', 'approach', 'policy', 'sustainability', 'change', 'research']" 0.0 0.0 ellipse
+17 "['food', 'system', 'transition', 'agri food', 'agri', 'agro', 'justice', 'agro food', 'research', 'sustainability']" 0.0 0.0 ellipse
+18 "['car', 'manufacturer', 'vehicle', 'automobile', 'filter', 'industry', 'emission', 'bus', 'converter', 'automotive']" 0.0 0.0 ellipse
+19 "['transition', 'energy', 'uk', 'study', 'gas', 'coalition', 'community', 'analysis', 'case', 'level']" 0.0 0.0 ellipse
+20 "['policy', 'innovation', 'firm', 'factor', 'influence', 'country', 'market', 'change', 'technology', 'sector']" 0.0 0.0 ellipse
+21 "['wind', 'power', 'solar', 'energy', 'development', 'case', 'actor', 'technology', 'project', 'firm']" 0.0 0.0 ellipse
+22 "['interview', 'study', 'process', 'data', 'analysis', 'interviewee', 'approach', 'article', 'research', 'actor']" 0.0 0.0 ellipse
+23 "['technology', 'china', 'firm', 'market', 'country', 'module', 'industry', 'germany', 'ti', 'solar']" 0.0 0.0 ellipse
+24 "['project', 'user', 'interview', 'government', 'building', 'time', 'interviewee', 'energy', 'community', 'city']" 0.0 0.0 ellipse
+25 "['consumer', 'market', 'technology', 'product', 'change', 'food', 'transition', 'system', 'firm', 'innovation']" 0.0 0.0 ellipse
+26 "['car', 'vehicle', 'mobility', 'transport', 'electric', 'service', 'innovation', 'manufacturer', 'market', 'system']" 0.0 0.0 ellipse
+27 "['transition', 'carbon', 'low', 'energy', 'low carbon', 'uk', 'policy', 'climate', 'change', 'paper']" 0.0 0.0 ellipse
+28 "['city', 'transition', 'change', 'urban', 'innovation', 'socio', 'environment', 'context', 'spatial', 'process']" 0.0 0.0 ellipse
+29 "['process', 'transition', 'system', 'actor', 'change', 'study', 'regime', 'context', 'approach', 'theory']" 0.0 0.0 ellipse
+30 "['vehicle', 'battery', 'electric', 'fuel', 'hybrid', 'technology', 'ev', 'cell', 'car', 'emission']" 0.0 0.0 ellipse
+31 "['transition', 'energy', 'policy', 'climate', 'change', 'process', 'understanding', 'intermediary', 'paper', 'system']" 0.0 0.0 ellipse
+32 "['actor', 'process', 'change', 'transition', 'regime', 'level', 'practice', 'vision', 'system', 'different']" 0.0 0.0 ellipse
+33 "['market', 'company', 'government', 'year', 'system', 'grid', 'sector', 'generation', 'energy', 'development']" 0.0 0.0 ellipse
+34 "['project', 'conservative', 'energy', 'technology', 'sector', 'liberal', 'development', 'china', 'wind', 'government']" 0.0 0.0 ellipse
+35 "['fuel', 'ethanol', 'brazil', 'oil', 'vehicle', 'malawi', 'market', 'country', 'programme', 'biofuels']" 0.0 0.0 ellipse
+36 "['policy', 'coal', 'industry', 'phase', 'energy', 'government', 'subsidy', 'power', 'economic', 'political']" 0.0 0.0 ellipse
+37 "['scenario', 'emission', 'land', 'crop', 'farm', 'subsidy', 'soil', 'farmer', 'peatlands', 'agriculture']" 0.0 0.0 ellipse
+38 "['actor', 'process', 'intermediary', 'transition', 'niche', 'level', 'study', 'action', 'network', 'context']" 0.0 0.0 ellipse
+39 "['patent', 'technology', 'cleantech', 'region', 'applicant', 'citation', 'firm', 'indicator', 'inventor', 'innovation']" 0.0 0.0 ellipse
+40 "['psychology', 'theory', 'transition', 'psychological', 'individual', 'behaviour', 'literature', 'research', 'actor', 'context']" 0.0 0.0 ellipse
+41 "['farmer', 'grazing', 'farm', 'dairy', 'farming', 'concern', 'cow', 'processor', 'factory', 'sector']" 0.0 0.0 ellipse
+42 "['bioeconomy', 'bio', 'based', 'resource', 'forest', 'policy', 'sector', 'actor', 'production', 'innovation']" 0.0 0.0 ellipse
+43 "['cluster', 'pollution', 'agent', 'green', 'capital', 'fine', 'level', 'green growth', 'project', 'innovation']" 0.0 0.0 ellipse
+44 "['solar', 'system', 'power', 'market', 'electricity', 'china', 'pv', 'energy', 'installation', 'capacity']" 0.0 0.0 ellipse
+45 "['state', 'war', 'economy', 'fuel', 'system', 'government', 'price', 'oil', 'year', 'market']" 0.0 0.0 ellipse
+46 "['emission', 'carbon', 'energy', 'technology', 'policy', 'low', 'pathway', 'mitigation', 'cost', 'transition']" 0.0 0.0 ellipse
+*edges
+1 3 3
+1 4 3
+1 6 1
+1 8 2
+1 12 1
+1 13 1
+1 14 1
+1 15 1
+1 17 2
+1 18 1
+1 20 1
+1 21 2
+1 23 1
+1 28 1
+1 29 2
+1 30 1
+1 31 2
+1 32 1
+1 38 2
+1 46 2
+2 4 1
+2 6 1
+2 8 1
+2 10 1
+2 18 2
+2 20 2
+2 26 2
+2 31 1
+2 35 2
+2 37 1
+2 39 1
+2 42 3
+2 44 1
+3 4 1
+3 7 1
+3 8 1
+3 12 1
+3 16 3
+3 24 1
+3 25 1
+3 31 1
+3 32 1
+3 33 1
+3 38 2
+4 5 1
+4 8 1
+4 9 1
+4 13 1
+4 14 1
+4 20 1
+4 21 2
+4 25 1
+4 29 2
+4 31 1
+4 40 1
+4 41 1
+4 46 1
+5 37 2
+5 41 3
+6 12 1
+6 13 1
+6 22 1
+6 26 1
+6 28 1
+6 29 1
+6 32 1
+6 44 1
+7 9 2
+7 14 1
+7 18 1
+7 26 2
+7 30 1
+7 38 1
+7 44 1
+8 12 1
+8 13 3
+8 19 1
+8 25 1
+8 28 4
+8 33 1
+8 38 1
+8 45 1
+9 12 1
+9 13 1
+9 18 2
+9 20 1
+9 26 4
+9 30 2
+10 15 1
+10 20 1
+10 21 2
+10 23 1
+10 33 1
+10 34 3
+10 44 1
+10 45 1
+11 20 2
+11 23 1
+11 25 1
+11 33 2
+11 34 1
+11 44 1
+12 13 1
+12 16 1
+12 28 1
+12 32 1
+12 38 1
+13 15 2
+13 17 1
+13 22 1
+13 26 1
+13 29 1
+13 32 1
+13 38 1
+14 19 1
+14 44 1
+15 20 1
+15 21 1
+15 22 1
+15 23 1
+15 25 1
+15 27 1
+15 36 1
+17 28 1
+17 29 1
+18 20 1
+18 25 1
+18 26 5
+18 30 3
+18 35 1
+19 27 1
+19 31 2
+19 34 1
+19 38 1
+20 23 2
+20 24 1
+20 25 1
+20 26 1
+20 34 1
+20 38 1
+20 44 1
+20 46 1
+21 29 1
+21 33 1
+21 34 1
+22 29 1
+22 33 1
+22 44 1
+24 26 1
+24 31 1
+24 33 1
+25 34 1
+25 44 1
+26 29 1
+26 30 3
+26 35 1
+27 33 2
+27 36 1
+27 46 1
+29 32 1
+30 39 1
+31 33 2
+31 34 2
+31 36 1
+31 44 1
+31 45 3
+32 46 2
+33 34 2
+33 36 1
+34 44 3
+35 37 1
+37 41 1
