@@ -1,0 +1,7 @@
+type: sci
+name: EIST
+optimal_topics:
+  min_topics: 2
+  step: 2
+  max_topics: 4
+  plot_path: ./data/evaluation/sci/lda

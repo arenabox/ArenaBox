@@ -1,0 +1,17 @@
+type: sci
+name: all
+reduce:
+  EIST: 46
+  RSOG: 50
+  SUS-SCI: 66
+  all: 138
+colormap:
+  EIST: red
+  RSOG: green
+  SUS-SCI: blue
+temporal:
+  threshold: 0.1
+pruned_graph:
+  - 1
+  - 3
+  - 5

@@ -1,12 +1,44 @@
 # Use following command to install hdbscan first : pip install --upgrade git+https://github.com/scikit-learn-contrib/hdbscan.git#egg=hdbscan
-bertopic
-sentence_transformers
-spacy
+# General
+argparse
+pandas
+tqdm
+pyyaml
+matplotlib
+
+# 1. Data Collection
+# 1.1. Scientific Articles
+# Follow Grobid installation  : https://github.com/kermitt2/grobid_client_python
+# 1.2. Tweets
+snscrape
+
+# 2. Data Extraction
+# 2.1 Scientific Articles
+beautifulsoup4
+
+# 3. Data Preprocessing
+spacy # Download en_core_web_md using: python -m spacy download en_core_web_md
 nltk
 tweet-preprocessor
-kaleido
-matplotlib
+
+# Train
+bertopic
+sentence_transformers
+
+# Evaluate
 gensim
+
+# Analysis
+statsmodels
+plotly
+seaborn
+scipy
 networkx
+
+
+kaleido
 pyvis
+
+
 # Download spacy model using: python -m spacy download en_core_web_md
+# nltk.download('omw-1.4')

@@ -1,0 +1,23 @@
+data:
+  collection: ./data/collection
+  extraction: ./data/extraction
+  preprocess: ./data/preprocessed
+  evaluation: ./data/evaluation
+  analysis:
+    plots: ./data/analysis/plots
+    csvs: ./data/analysis/csvs
+sci:
+  xmls:
+    EIST: EIST_PDFS_TM
+    RSOG: RSOG_PDFS_TM
+    SUS-SCI: SUS-SCI_PDFS_TM
+  pdfs:
+    EIST: EIST_PDFS_TM
+    RSOG: RSOG_PDFS_TM
+    SUS-SCI: SUS-SCI_PDFS_TM
+  metadata:
+    EIST: EIST_PDFS_TM/eist574.csv
+    RSOG: RSOG_PDFS_TM/rsog659.csv
+    SUS-SCI: SUS-SCI_PDFS_TM/sussci987.csv
+
+model: models

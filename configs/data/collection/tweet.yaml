@@ -1,0 +1,24 @@
+type: tweets # website or sci
+users: # list of users for tweet crawl
+  - EITRawMaterials
+
+from_users: False # if enabled then tweets for given list of users will be crawled
+have_user_mentioned: False # if enabled then tweets which mentions the user will be crawled
+
+from_mentioned_users: False # If true then looks for tweet jsons in save_folder for all the users and crawl tweets
+  # for mentioned users in the tweets.
+mentioned_by_params:
+  top_n_users: 400 # Get tweets for the top_n_users mentioned by a particular user. It is used when mentioned_by_user is enabled
+  interaction_level: 3 # Save those mentioned users who have mentioned original user interaction_level times
+
+get_images: False # extract images from tweets of users
+# Optional, comment them out if not required. All the tweets will be mined in that case.
+
+containing_keywords: # looks for tweets containing following keywords
+  - ChatGPT
+  - OpenAI
+  - Bard
+  - Dall-e
+  - Galactica
+since: 2022-01-01
+until: 2023-01-31

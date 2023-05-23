@@ -1,0 +1,12 @@
+type: sci
+corpus_name: EIST # this will be used to save processed file as {corpus_name}.json
+info_to_extract: # list of information to extract from xml file
+  - doi
+  - title
+  - abstract
+  - text
+  - location
+  - year
+  - authors
+metadata_update: True
+#metadata_csv: ./data/collection/sci/pdfs/EIST_PDFS_TM/eist574.csv # metadata containing article title, doi, abstract, author info etc

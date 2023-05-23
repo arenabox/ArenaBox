@@ -1,0 +1,12 @@
+type: sci
+reduce:
+  EIST: 46
+  RSOG: 50
+  SUS-SCI: 66
+  all: 138
+network:
+  - EIST
+  - RSOG
+  - SUS-SCI
+temporal:
+  threshold: 0.1

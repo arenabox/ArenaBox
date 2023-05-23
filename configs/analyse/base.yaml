@@ -1,0 +1,25 @@
+type: sci
+name: all
+reduce: # Keep this if number of topics needs to be reduced before analysis
+  EIST: 46
+  RSOG: 50
+  SUS-SCI: 66
+  all: 138
+
+topic_loading:
+  x_label: Articles
+  y_label: Topics
+
+topic_landscape: True
+descriptive_stats: True
+
+temporal:
+  threshold: 0.1
+  top_n_trend: 5
+  type:
+    - hot
+    - cold
+    - revival
+    - evergreen
+    - wallflower
+
