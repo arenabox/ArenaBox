@@ -1,6 +1,6 @@
-# METAFRASIA
+# ArenaBox
 
-This study envisions a metatheoretical framework and research agenda for socio-institutional analysis(SIA) in sustainability transitions research by performing a computational literature review and social x-ray of three distinct academic discourse networks.By relating Research in Sociology of Organizations, Environmental Innovation, and Sustainability Science and by employing advanced machine learning techniques, including Latent Dirichlet Allocation (LDA) and BERTopic, we analyze a vast corpus of 2,360 articles, totaling approximately 9.8 million words. Our hybrid socio-semantic approach involves (a) an interstitial mapping of authors in these fields, utilizing a 'social x-ray' method, and (b) a computational literature review to discern 138 distinct research themes. This endeavor not only catalogues the focal topics across these journals but also highlights the necessity for more nuanced, interstitial research within this linguistic topography. Consequently, we are envisioning an interstitial research agenda, comprising five research directions and a 15-point action plan aimed at fostering interdisciplinary dialogue and advancing theoretical sociology driven sustainability transitions research in the emerging domain of SIA . Our methodological innovation demonstrates the value of computational analytics in conceptualizing and navigating the complex networks of socio-institutional discourse, setting a new precedent for future interdisciplinary research.
+Library to extract insights from tweets, scientific articles and websites (coming soon) using [BERTopic](https://github.com/MaartenGr/BERTopic).
 
 
 ## Usage
