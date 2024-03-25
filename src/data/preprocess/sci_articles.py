@@ -152,6 +152,12 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Arguments for data preprocessing')
 
     parser.add_argument(
+        '-base_config',
+        help='Path to base path config file',
+        type=str, default='configs/base_path.yaml',
+    )
+
+    parser.add_argument(
         '-config',
         help='Path to data config file',
         type=str, default='configs/data/preprocess/sci_articles.yaml',
@@ -162,8 +168,7 @@ if __name__ == '__main__':
         type=str, default=None,
     )
 
-    with open('./configs/base_path.yaml') as file:
-        base_path = yaml.safe_load(file)
+
 
     args, remaining_args = parser.parse_known_args()
 
@@ -172,8 +177,14 @@ if __name__ == '__main__':
 
     data_type = yaml_data['type']
 
-    base_jsonl_folder = join(base_path['data']['extraction'], data_type)
     journal = args.journal
+
+
+    with open(args.base_config) as file:
+        base_path = yaml.safe_load(file)
+    base_jsonl_folder = join(base_path['data']['extraction'], data_type)
+
+
 
     if journal is not None:
         file_path = join(base_jsonl_folder, f'{journal}.json')

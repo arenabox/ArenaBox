@@ -15,8 +15,10 @@ class Preprocessor():
     and it's configurable based on the input data given to the class constructor.
     """
 
-    def __init__(self, config_data):
+    def __init__(self, config_data=None):
 
+        if config_data is None:
+            config_data = {}
         nltk.download('stopwords')
         self.nlp = en_core_web_md.load()
         self.remove_mentions = config_data.get('remove_mentions', None)

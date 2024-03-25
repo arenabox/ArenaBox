@@ -34,7 +34,7 @@ plotly
 seaborn
 scipy
 networkx
-
+adjustText
 
 kaleido
 pyvis
