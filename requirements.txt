@@ -24,6 +24,9 @@ tweet-preprocessor
 # Train
 bertopic
 sentence_transformers
+accelerate
+optimum
+auto-gptq
 
 # Evaluate
 gensim

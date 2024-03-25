@@ -12,7 +12,8 @@ from nltk.corpus import stopwords
 from sentence_transformers import SentenceTransformer
 from sklearn.feature_extraction.text import CountVectorizer
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-
+import nltk
+nltk.download('stopwords')
 # System prompt describes information given to all conversations
 system_prompt = """
 [INST] <>
@@ -148,7 +149,7 @@ class TopicModelling:
     self.hdbscan_model = BaseCluster()
     # Find clusters of semantically similar documents
     hdbscan_model = HDBSCAN(
-        **self.config['train']['cluster']
+        **self.config['train']['cluster']['hdbscan']
     )
     self.clusters = hdbscan_model.fit(self.reduced_embeddings).labels_
     sw = stopwords.words()
