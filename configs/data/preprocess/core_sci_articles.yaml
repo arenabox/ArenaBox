@@ -1,0 +1,31 @@
+type: sci
+preprocess:
+  remove_paran_content: False # to remove reference from the text
+  noisywords: # give a list of noisy words to remove
+      - et
+      - al
+      - al.
+      - al.,
+      - b.v.
+      - ©
+      - abstract
+      - emerald
+      - publishing
+      - limited
+      - copyright
+      - chapter
+      - elsevier
+  remove_pos: # pos tags from spacy: https://spacy.io/usage/linguistic-features
+    - ADV
+    - PRON
+    - CCONJ
+    - PUNCT
+    - PART
+    - DET
+    - ADP
+    - SPACE
+    - NUM
+    - SYM
+chunk: # used to break long sentences into small chunks within range (min_seq_len, max_seq_len)
+  max_seq_len: 512
+  min_seq_len: 100

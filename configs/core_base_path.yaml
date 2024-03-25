@@ -1,0 +1,11 @@
+data:
+  #collection: ./data/collection
+  extraction: ./data/extraction
+  preprocess: ./data/preprocessed
+  encoded: ./data/encoded
+  evaluation: ./data/evaluation
+  analysis:
+    plots: ./data/analysis/plots
+    csvs: ./data/analysis/csvs
+
+model: models
